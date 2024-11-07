@@ -3,7 +3,7 @@
 import ProductCard from '@/components/core/ProductCard'
 import React, { useEffect, useState } from 'react'
 
-const product = () => {
+const Product = () => {
   const [AllProducts,SetAllProduct] = useState([])
   useEffect(() => {
     fetch('https://fakestoreapi.in/api/products')
@@ -22,4 +22,4 @@ const product = () => {
   )
 }
 
-export default product
+export default Product

@@ -4,8 +4,10 @@ import { useParams } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
 
 const ProductDetail = () => {
+  const params = useParams()
+  const id = params?.id
     const [AllProducts,SetAllProduct] = useState([])
-    const [FilterProduct,SetFilterProduct] = useState([])
+    // const [FilterProduct,SetFilterProduct] = useState([])
     useEffect(() => {
       fetch('https://fakestoreapi.in/api/products')
        .then(response => response.json())
@@ -13,8 +15,8 @@ const ProductDetail = () => {
     }, [])
     
     if (!AllProducts.length) return <div>Loading...</div>
-    const params = useParams()
-    const id = params?.id
+   
+    
     const Product = AllProducts.find(product => product.id === parseInt(id))
 
     
@@ -54,7 +56,6 @@ const ProductDetail = () => {
             </div>
             
             
-        <div className=""></div>
         </div>
       
     </div>

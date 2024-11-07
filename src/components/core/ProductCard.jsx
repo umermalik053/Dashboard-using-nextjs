@@ -13,7 +13,7 @@ import Link from "next/link"
     const { id, brand, category,color,description ,price,title,image} = product;
     
     return (
-      <div>
+      <div className="hover: cursor-pointer">
        <Link href={`/product/${id}`}>
        <Card>
         <div className="flex justify-center w-[200px] h-[150px]">

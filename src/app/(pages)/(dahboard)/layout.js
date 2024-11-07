@@ -5,7 +5,7 @@ import { auth , onAuthStateChanged } from '@/Firebase/FirebaseConfig'
 import { useRouter } from 'next/navigation'
 import React, { useEffect } from 'react'
 
-const layout = ({children}) => {
+const Layout = ({children}) => {
   const router = useRouter()
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
@@ -32,4 +32,4 @@ const layout = ({children}) => {
   )
 }
 
-export default layout
+export default Layout
